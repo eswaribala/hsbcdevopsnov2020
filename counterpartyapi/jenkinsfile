@@ -12,7 +12,7 @@ pipeline{
    
        steps{
        
-          bat "mvn -f ./currencyapijenkins clean install -DskipTests"
+          bat "mvn -f ./counterpartyapi clean install -DskipTests"
                        
        }
    
