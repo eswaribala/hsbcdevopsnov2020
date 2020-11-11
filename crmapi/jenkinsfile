@@ -13,6 +13,8 @@ pipeline{
        steps{
        
           bat "mvn -f ./crmapi clean install -DskipTests"
+          bat "docker build -f crmapi/dockerfile -t crmapp ./crmapi"
+          bat "docker run -p 6064:6060 --name crm-c3 -d crmapp:latest"   
                        
        }
    
