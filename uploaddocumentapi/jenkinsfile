@@ -14,7 +14,7 @@ pipeline{
           echo "start building...." 
           bat "mvn -f ./uploaddocumentapi clean install -DskipTests"
           bat "docker build -f uploaddocumentapi/dockerfile -t uploaddocumentapp ./uploaddocumentapi"
-          bat "docker run -p 7072:7070  -d uploaddocumentapp:latest"
+          bat "docker run  -d uploaddocumentapp:latest"
                        
        }
    
